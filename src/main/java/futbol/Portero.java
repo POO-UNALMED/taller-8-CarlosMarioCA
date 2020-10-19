@@ -14,7 +14,7 @@ public class Portero extends Futbolista {
         this.golesRecibidos = golesRecibidos;
         this.dorsal = dorsal;
     }
-
+    
     @Override
     public boolean jugarConLasManos() {
         return true;
@@ -44,8 +44,7 @@ public class Portero extends Futbolista {
     public void setDorsal(byte dorsal) {
         this.dorsal = dorsal;
     }
-
-    @Override
+    
     public int compareTo(Futbolista t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

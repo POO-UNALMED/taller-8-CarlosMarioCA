@@ -30,13 +30,11 @@ public class Jugador extends Futbolista {
         return "El futbolista "+ this.getNombre() + " tiene " + this.getEdad() + ", y juega de " + this.getPosicion() + " con el dorsal " + this.getDorsal() + ". Ha marcado " + this.getGolesMarcados();
     }
     
-    
     @Override
     public boolean jugarConLasManos() {
         return false;
     }
 
-    @Override
     public int compareTo(Futbolista t) {
         int diferenciaEdad = this.getEdad() - t.getEdad();
         return Math.abs(diferenciaEdad);
