@@ -28,30 +28,35 @@ public class Futbolista implements Comparable<Object> {
         return "El futbolista " + this.nombre + " tiene " + this.edad + ", y juega de " + this.posicion;
     }
 
+ /*
     public boolean equals(Futbolista f) {
-        int comparar = this.compareTo(f);
-        if (comparar == 0) {
+        if ((this.getNombre().equals(f.getNombre()))&&(this.getEdad()==f.getEdad())&&(this.getPosicion().equals(f.getPosicion()))) {
             return true;
         } else {
             return false;
         }
     }
-
-    @Override
-    public int compareTo(Object o) {
-        int comparar = this.compareTo(o);
-        if (comparar == 0) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-    
-    public boolean jugarConLasManos(){
-        if(this.posicion.equals("Portero")){
-            return true;
+*/
+    public boolean equals(Object o) {
+        boolean igualdad; 
+        if(this.compareTo(o)== 0){
+            igualdad = true;
         }
         else{
+            igualdad = true;
+        }
+        return igualdad;
+    }
+    
+    @Override
+    public int compareTo(Object o) {
+        return this.compareTo(o);
+    }
+
+    public boolean jugarConLasManos() {
+        if (this.posicion.equals("Portero")) {
+            return true;
+        } else {
             return false;
         }
     }
@@ -71,10 +76,9 @@ public class Futbolista implements Comparable<Object> {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
-    public String getPosicion(){
+
+    public String getPosicion() {
         return this.posicion;
     }
-    
-    
+
 }
